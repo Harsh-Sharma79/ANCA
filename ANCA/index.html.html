@@ -1,0 +1,2617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANCA – Abhishek Naag Coaching Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* VARIABLES */
+:root {
+  --gold: #D4A64A;
+  --gold-light: #F5E7C5;
+  --gold-dark: #A8791F;
+  --blue: #0E2A47;
+  --blue-light: #163B63;
+  --blue-dark: #081C30;
+  --ink: #0E2A47;
+  --ink-soft: #35506D;
+  --cream: #F8F6F1;
+  --cream-dark: #ECE6DA;
+  --white: #FFFFFF;
+  --text-muted: #6E7B8A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background:
+    radial-gradient(
+      rgba(212,166,74,.03) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold);
+  color: white;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgb(14, 42, 71);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 166, 74, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 90px;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.nav-logo span {
+  color: var(--gold);
+  font-size: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.82);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: white !important;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 500 !important;
+  box-shadow: 0 10px 25px rgba(212,166,74,0.18);
+  transition: transform 0.2s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+}
+
+.nav-logo img {
+  height: 55px;
+  width: 55px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 5% 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(212,166,74,0.18), transparent 30%),
+    linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, var(--blue-light) 100%);
+  z-index: 0;
+}
+
+.hero-ornament {
+  display: none;
+}
+
+.hero-logo-bg {
+  position: absolute;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  background: rgba(212,166,74,.08);
+  border: 2px solid rgba(212,166,74,.18);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.hero-logo-bg img {
+  width: 75%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.4;
+  box-shadow:
+    0 0 40px rgba(212,166,74,.08),
+    inset 0 0 30px rgba(212,166,74,.08);
+  filter: brightness(1.15) contrast(1.1);
+}
+
+.hero-ornament::before,
+.hero-ornament::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(212,166,74,0.12);
+}
+
+.hero-ornament::before {
+  inset: 40px;
+}
+
+.hero-ornament::after {
+  inset: 80px;
+}
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.08;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .hero-title-hindi {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 40px;
+    max-width: 520px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #D4A64A, #B8862F);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+    box-shadow: 0 10px 25px rgba(212,166,74,0.2);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    border: 1px solid rgba(212,166,74,0.7);
+    color: var(--gold-light);
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(212,166,74,0.12);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(212,166,74,0.22);
+  }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.3px;
+  }
+
+  .star-group {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 4px;
+  }
+
+  .star {
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  .hero-logo-bg img{
+    width:320px;
+    height:auto;
+    opacity:0.12;
+    filter:
+      drop-shadow(0 0 30px rgba(212,166,74,.2));
+  }
+
+  @media(max-width:768px){
+
+    .hero-logo-bg{
+      right:50%;
+      transform:translate(50%,-50%);
+    }
+
+    .hero-logo-bg img{
+      width:220px;
+      opacity:.06;
+    }
+
+  }
+  /* MARQUEE */
+  .marquee-band {
+    background: var(--blue-dark);
+    padding: 14px 0;
+    overflow: hidden;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 60px;
+    animation: marquee 18s linear infinite;
+    width: max-content;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .marquee-item {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    white-space: nowrap;
+  }
+
+  .marquee-dot {
+    color: var(--gold);
+    margin-right: 60px;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 100px 5%;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 60px;
+  }
+
+  /* REVIEWS */
+  .reviews-section {
+    padding: 100px 5%;
+    background: linear-gradient(to bottom, #F8F6F1, #F1ECE2);
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .review-card {
+    background: white;
+    padding: 36px 32px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(14,42,71,0.05);
+  }
+
+  /* CTA */
+  .cta-banner {
+    background: linear-gradient(135deg, #0E2A47 0%, #163B63 100%);
+    padding: 64px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(212,166,74,0.08);
+    border-radius: 50%;
+    top: -200px;
+    right: -100px;
+  }
+
+  .cta-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 42px);
+    color: white;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-banner p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-white {
+    background: linear-gradient(135deg, #D4A64A, #B8862F);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-white:hover {
+    transform: translateY(-2px);
+  }
+
+  /* FOOTER */
+  footer {
+    background: #081C30;
+    padding: 60px 5% 32px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .footer-logo span {
+    color: var(--gold);
+  }
+
+  .footer-tagline {
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(255,255,255,0.45);
+  }
+
+  .footer-contact a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.62);
+    text-decoration: none;
+  }
+
+  .footer-contact a:hover {
+    color: var(--gold);
+  }
+
+  .rating-badge {
+    background: rgba(212,166,74,0.15);
+    border: 1px solid rgba(212,166,74,0.3);
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: var(--gold);
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .hero-stats {
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+  }
+
+.enquiry-float{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:9999;
+  background:linear-gradient(135deg,#D4A64A,#B8862F);
+  color:white;
+  padding:16px 24px;
+  border-radius:60px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+  animation:floatPulse 2s infinite;
+  transition:all .25s ease;
+}
+
+.enquiry-float:hover{
+  transform:translateY(-4px) scale(1.03);
+}
+
+@keyframes floatPulse{
+  0%{box-shadow:0 0 0 0 rgba(212,166,74,0.4);}
+  70%{box-shadow:0 0 0 18px rgba(212,166,74,0);}
+  100%{box-shadow:0 0 0 0 rgba(212,166,74,0);}
+}
+
+.enquiry-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(8px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:10000;
+  padding:20px;
+}
+
+.enquiry-box{
+  width:100%;
+  max-width:900px;
+  max-height:90vh;
+  overflow-y:auto;
+  background:white;
+  border-radius:24px;
+  padding:40px;
+  position:relative;
+  animation:popup .3s ease;
+}
+
+@keyframes popup{
+  from{
+    opacity:0;
+    transform:translateY(30px) scale(.95);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.close-enquiry{
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:#f3f3f3;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.enquiry-header h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  color:#0E2A47;
+  margin-bottom:10px;
+}
+
+.enquiry-header p{
+  color:#666;
+  margin-bottom:35px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+.input-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.input-group label{
+  margin-bottom:8px;
+  font-size:14px;
+  font-weight:600;
+  color:#0E2A47;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+  padding:14px 16px;
+  border:1px solid rgba(14,42,71,0.12);
+  border-radius:12px;
+  font-size:15px;
+  outline:none;
+  transition:.2s;
+  font-family:'DM Sans',sans-serif;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+  border-color:#D4A64A;
+  box-shadow:0 0 0 4px rgba(212,166,74,0.12);
+}
+
+.full-width{
+  margin-top:22px;
+}
+
+.submit-enquiry{
+  margin-top:28px;
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#0E2A47,#163B63);
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.submit-enquiry:hover{
+  transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .enquiry-box{
+    padding:28px 22px;
+  }
+
+  .enquiry-header h2{
+    font-size:30px;
+  }
+
+  .enquiry-float{
+    right:14px;
+    bottom:14px;
+    padding:14px 18px;
+    font-size:14px;
+  }
+
+}
+  .course-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    margin-top:50px;
+  }
+
+  .course-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(212,166,74,.18);
+    box-shadow:0 15px 40px rgba(14,42,71,.06);
+    transition:.3s ease;
+  }
+
+  .course-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 50px rgba(14,42,71,.1);
+  }
+
+  .course-btn{
+    width:100%;
+    border:none;
+    background:white;
+    padding:26px;
+    cursor:pointer;
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    font-weight:700;
+    color:#0E2A47;
+    text-align:left;
+    position:relative;
+  }
+
+  .course-btn::after{
+    content:'+';
+    position:absolute;
+    right:24px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#D4A64A;
+    font-size:28px;
+  }
+
+  .course-subjects{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+    background:#FAF8F3;
+  }
+
+  .course-subjects ul{
+    list-style:none;
+    padding:0 26px 26px;
+  }
+
+  .course-subjects li{
+    padding:12px 0;
+    color:#35506D;
+    border-bottom:1px solid rgba(0,0,0,.08);
+  }
+
+  .course-subjects li:last-child{
+    border:none;
+  }
+
+@media (max-width:1024px){
+  .course-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:768px){
+  .course-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+  .course-title{
+  display:block;
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.course-count{
+  display:block;
+  font-size:13px;
+  color:#8b98a8;
+  font-family:'DM Sans',sans-serif;
+  font-weight:500;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+.course-subjects li::before{
+  content:'✓';
+  color:#D4A64A;
+  font-weight:bold;
+  margin-right:12px;
+}
+
+  #COURSES{
+    background:linear-gradient(
+      to bottom,
+      #F8F6F1 0%,
+      #FFFDF9 100%
+    );
+  }
+  .course-card:hover{
+    transform:translateY(-8px);
+    border-color:#D4A64A;
+    box-shadow:
+    0 20px 50px rgba(14,42,71,.08),
+    0 0 30px rgba(212,166,74,.15);
+  }
+
+    .location-section{
+    padding:100px 5%;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:40px;
+    align-items:center;
+    background:linear-gradient(to bottom,#FFFDF9,#F8F6F1);
+  }
+
+  .location-details{
+    background:white;
+    padding:40px;
+    border-radius:24px;
+    border:1px solid rgba(212,166,74,.15);
+    box-shadow:0 20px 50px rgba(14,42,71,.06);
+  }
+
+  .location-item{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+    margin-top:28px;
+  }
+
+  .location-icon{
+    width:56px;
+    height:56px;
+    min-width:56px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    background:rgba(212,166,74,.12);
+    color:#D4A64A;
+  }
+
+  .location-item-title{
+    font-weight:700;
+    color:#0E2A47;
+    margin-bottom:6px;
+  }
+
+  .location-item-text{
+    color:#6E7B8A;
+    line-height:1.8;
+  }
+
+  .location-map{
+    overflow:hidden;
+    border-radius:24px;
+    min-height:500px;
+    border:1px solid rgba(212,166,74,.15);
+    box-shadow:0 20px 50px rgba(14,42,71,.06);
+  }
+
+  .location-map iframe{
+    width:100%;
+    height:100%;
+    min-height:500px;
+    border:none;
+  }
+
+  .location-buttons{
+    display:flex;
+    gap:14px;
+    margin-top:35px;
+    flex-wrap:wrap;
+  }
+
+  .location-btn{
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.25s;
+  }
+
+  .location-btn.primary{
+    background:linear-gradient(135deg,#D4A64A,#B8862F);
+    color:white;
+  }
+
+  .location-btn.secondary{
+    border:1px solid rgba(212,166,74,.4);
+    color:#0E2A47;
+  }
+
+  .location-btn:hover{
+    transform:translateY(-3px);
+  }
+
+  @media(max-width:900px){
+    .location-section{
+      grid-template-columns:1fr;
+    }
+
+    .location-map{
+      min-height:400px;
+    }
+  }
+  .nav-links a{
+    position:relative;
+    overflow:hidden;
+  }
+
+  .nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#D4A64A;
+    transition:.3s ease;
+  }
+
+  .nav-links a:hover::after{
+    width:100%;
+  }
+
+  .anca-showcase{
+  display:flex;
+  flex-direction:column;
+  gap:80px;
+  margin-top:60px;
+}
+
+.gallery-heading{
+  margin-bottom:25px;
+}
+
+.gallery-heading h3{
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  color:#0E2A47;
+  margin-bottom:8px;
+}
+
+.gallery-heading p{
+  color:#6E7B8A;
+}
+
+.event-group{
+  display:grid;
+  gap:24px;
+}
+
+.event-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+  background:#fff;
+  border:1px solid rgba(212,166,74,.15);
+
+  box-shadow:
+  0 10px 40px rgba(14,42,71,.08),
+  0 0 0 1px rgba(255,255,255,.6) inset;
+
+  transition:.45s ease;
+}
+
+.event-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.05);
+  transition:.5s ease;
+}
+
+.event-card:hover{
+  transform:translateY(-10px);
+  box-shadow:
+  0 25px 60px rgba(14,42,71,.15),
+  0 0 30px rgba(212,166,74,.15);
+}
+
+.event-tag{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:50px;
+
+  background:rgba(212,166,74,.2);
+
+  border:1px solid rgba(212,166,74,.3);
+
+  color:#F5E7C5;
+
+  font-size:12px;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  margin-bottom:12px;
+}
+
+.event-overlay{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:24px;
+  background:linear-gradient(
+    to top,
+    rgba(14,42,71,.92),
+    rgba(14,42,71,.55),
+    transparent
+  );
+  color:white;
+}
+
+.event-overlay h3{
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.event-overlay p{
+  font-size:14px;
+  line-height:1.7;
+  opacity:.9;
+}
+
+.infrastructure{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.infrastructure .event-card{
+  aspect-ratio:3/4;
+}
+
+.annual-party{
+  grid-template-columns:2fr 1fr;
+}
+
+.annual-party .event-card:first-child{
+  aspect-ratio:16/9;
+}
+
+.annual-party .event-card:last-child{
+  aspect-ratio:16/7;
+}
+
+.diwali{
+  grid-template-columns:1fr;
+}
+
+.diwali .event-card{
+  aspect-ratio:16/9;
+}
+
+.children{
+  grid-template-columns:1fr 1fr;
+}
+
+.children .event-card{
+  aspect-ratio:4/3;
+}
+
+.community{
+  grid-template-columns:2fr 1fr;
+}
+
+.community .event-card:first-child{
+  aspect-ratio:16/8;
+}
+
+.community .event-card:last-child{
+  aspect-ratio:16/8;
+}
+
+.focused-class{
+  grid-template-columns:1fr;
+}
+
+.focused-class .event-card{
+  aspect-ratio: 4 / 5;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+@media(max-width:768px){
+
+  .infrastructure,
+  .annual-party,
+  .children,
+  .community,
+  .focused-class{
+    grid-template-columns:1fr;
+  }
+
+  .event-card{
+    height:auto !important;
+    min-height:320px;
+  }
+
+}
+ 
+  @media(max-width:768px){
+
+
+    .results-section{
+    padding:100px 5%;
+    background:#FFFDF9;
+    }
+}
+
+  .rankers-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+      margin-top:50px;
+  }
+
+  .rank-card{
+      background:white;
+      border-radius:24px;
+      padding:30px;
+      text-align:center;
+      border:1px solid rgba(212,166,74,.2);
+      box-shadow:0 15px 40px rgba(14,42,71,.06);
+      transition:.3s;
+  }
+
+  .rank-card:hover{
+      transform:translateY(-8px);
+  }
+
+  .rank-card img{
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid #D4A64A;
+      margin:15px auto;
+  }
+
+  .rank-no{
+      font-size:18px;
+      font-weight:700;
+      color:#D4A64A;
+  }
+
+  .percentage{
+      font-size:36px;
+      font-weight:700;
+      color:#0E2A47;
+      margin:10px 0;
+  }
+
+  .marks{
+      margin-top:15px;
+      background:#FAF8F3;
+      padding:15px;
+      border-radius:12px;
+  }
+
+  .marks p{
+      margin:5px 0;
+      color:#35506D;
+  }
+
+  .subject-toppers{
+      margin-top:80px;
+  }
+
+  .subject-title{
+      text-align:center;
+      font-size:32px;
+      color:#0E2A47;
+      margin-bottom:40px;
+  }
+
+  .subject-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+  }
+
+  .subject-card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      border:1px solid rgba(212,166,74,.2);
+      box-shadow:0 15px 40px rgba(14,42,71,.06);
+  }
+
+  .subject-card h4{
+      color:#0E2A47;
+      margin-bottom:10px;
+  }
+
+  .top-score{
+      font-size:36px;
+      font-weight:700;
+      color:#D4A64A;
+      margin-bottom:15px;
+  }
+
+  .subject-card p{
+      margin:5px 0;
+      color:#35506D;
+  }
+
+  @media(max-width:768px){
+
+      .rankers-grid,
+      .subject-grid{
+          grid-template-columns:1fr;
+      }
+
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+    margin-bottom:40px;
+  }
+
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:24px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+    color:rgba(255,255,255,.5);
+    font-size:13px;
+  }
+
+  .footer-contact{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .footer-google{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  @media(max-width:768px){
+
+    .footer-top,
+    .footer-bottom{
+      flex-direction:column;
+    }
+
+  }
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s ease;
+    }
+
+    .reveal.active{
+    opacity:1;
+    transform:none;
+    }
+
+    .toppers-gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:50px;
+    }
+
+    .topper-poster{
+      overflow:hidden;
+      border-radius:24px;
+      background:white;
+      box-shadow:0 20px 50px rgba(14,42,71,.08);
+      transition:.35s ease;
+    }
+
+    .topper-poster:hover{
+      transform:translateY(-10px);
+    }
+
+    .topper-poster img{
+      width:100%;
+      display:block;
+    }
+
+    .subject-poster-wrapper{
+      margin-top:80px;
+      text-align:center;
+    }
+
+    .subject-poster{
+      width:100%;
+      max-width:1000px;
+      border-radius:24px;
+      box-shadow:0 25px 60px rgba(14,42,71,.08);
+    }
+    .subject-table{
+      margin-top:60px;
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      overflow:auto;
+    }
+
+    .subject-table table{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    .subject-table th{
+      background:#0E2A47;
+      color:white;
+    }
+
+    .subject-table th,
+    .subject-table td{
+      padding:14px;
+      border-bottom:1px solid #eee;
+      text-align:left;
+    }
+    
+  .anca-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  margin-top:60px;
+}
+
+.gallery-card{
+  position:relative;
+  height:320px;
+  overflow:hidden;
+  border-radius:24px;
+}
+
+.gallery-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.gallery-card:hover img{
+  transform:scale(1.08);
+}
+
+.large{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+.tall{
+  grid-row:span 2;
+}
+
+.wide{
+  grid-column:span 2;
+}
+
+.hero-gallery{
+  grid-column:1 / -1;
+  height:450px;
+}
+
+.full-gallery{
+  grid-column:1 / -1;
+  height: 550px;
+}
+
+.gallery-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:flex-end;
+  flex-direction:column;
+  padding:25px;
+
+  background:linear-gradient(
+      to top,
+      rgba(14,42,71,.92),
+      rgba(14,42,71,.3),
+      transparent
+  );
+}
+
+.gallery-overlay span{
+  color:#D4A64A;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.gallery-overlay h3{
+  color:white;
+  font-size:24px;
+  margin-top:8px;
+}
+
+@media(max-width:900px){
+
+  .anca-gallery{
+      grid-template-columns:1fr;
+      grid-auto-rows:300px;
+  }
+
+  .large,
+  .wide,
+  .tall{
+      grid-column:auto;
+      grid-row:auto;
+  }
+
+}
+/* PREMIUM REVIEWS MARQUEE */
+
+.reviews-section{
+  padding:120px 0;
+  background:
+  linear-gradient(
+    to bottom,
+    #FFFDF9,
+    #F8F6F1
+  );
+  overflow:hidden;
+}
+
+.review-marquee{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+  margin-top:60px;
+}
+
+.review-track{
+  display:flex;
+  gap:24px;
+  width:max-content;
+  animation:reviewScroll 55s linear infinite;
+}
+
+.review-marquee:hover .review-track{
+  animation-play-state:paused;
+}
+
+@keyframes reviewScroll{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+.review-card{
+  width:380px;
+  min-height:280px;
+  background:white;
+  border-radius:28px;
+  padding:32px;
+  flex-shrink:0;
+
+  border:1px solid rgba(212,166,74,.18);
+
+  box-shadow:
+  0 15px 40px rgba(14,42,71,.06);
+
+  transition:.3s ease;
+}
+
+.review-card:hover{
+  transform:translateY(-8px);
+  box-shadow:
+  0 25px 60px rgba(14,42,71,.12);
+}
+
+.review-stars{
+  color:#D4A64A;
+  font-size:18px;
+  margin-bottom:18px;
+}
+
+.review-text{
+  color:#35506D;
+  line-height:1.8;
+  font-size:15px;
+  margin-bottom:24px;
+}
+
+.review-author{
+  font-weight:700;
+  color:#0E2A47;
+  font-size:16px;
+}
+
+.review-time{
+  color:#8b98a8;
+  font-size:13px;
+  margin-top:4px;
+}
+
+.review-google{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:22px;
+}
+
+.google-badge{
+  background:rgba(212,166,74,.12);
+  color:#D4A64A;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.review-fade-left,
+.review-fade-right{
+  position:absolute;
+  top:0;
+  width:140px;
+  height:100%;
+  z-index:5;
+  pointer-events:none;
+}
+
+.review-fade-left{
+  left:0;
+  background:
+  linear-gradient(
+    to right,
+    #FFFDF9,
+    transparent
+  );
+}
+
+.review-fade-right{
+  right:0;
+  background:
+  linear-gradient(
+    to left,
+    #FFFDF9,
+    transparent
+  );
+}
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#fff;
+}
+
+@media(max-width:768px){
+
+@media (max-width: 768px){
+
+  .menu-toggle{
+    display:block;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
+    z-index:1001;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:90px;
+    right:10px;
+    width:250px;
+    background:#0E2A47;
+    padding:20px;
+    border-radius:15px;
+    gap:15px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="images/logo.jpg" alt="ANCA Logo" loading="lazy">
+    <span>ANCA</span>
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+  </div>
+    <ul class="nav-links" id="navLinks">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+      </div>
+      <li><a href="#COURSES">📚 Courses</a></li>
+      <li><a href="#why">⭐ Why ANCA</a></li>
+      <li><a href="#reviews">💬 Reviews</a></li>
+      <li><a href="#results">🏆 Results</a></li>
+      <li><a href="#contact">📍 Visit Us</a></li>
+      <li><a href="#" onclick="openEnquiry()" class="nav-cta">✨ Admission Open</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-logo-bg">
+    <img src="images/logo.jpg" alt="ANCA" loading="lazy">
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Navi Mumbai's Commerce Coaching Institute</p>
+    <h1 class="hero-title">Abhishek Naag<br>Coaching Academy</h1>
+    <p class="hero-title-hindi">अभिषेक नाग कोचिंग अकेडमी</p>
+    <p class="hero-description">
+      Building strong knowledge foundations in Commerce, Accountancy, and beyond. 
+      Professional and qualified faculty, personal attention, and a track record that speaks in results.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:+919967673877" class="btn-primary">Call Now</a>
+      <a href="#COURSES" class="btn-secondary">Explore Courses</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="star-group">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <span class="stat-number">4.9</span>
+        <span class="stat-label">Google Rating</span>
+      </div>
+      <div>
+        <span class="stat-number">23+</span>
+        <span class="stat-label">Student Reviews</span>
+      </div>
+      <div>
+        <span class="stat-number">Commerce<br><span style="font-size:22px"></span></span>
+        <span class="stat-label">Specialisation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MARQUEE -->
+<div class="marquee-band">
+  <div class="marquee-track">
+    <span class="marquee-item">Deep concept clarity</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Marathon Classes</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Exam focused approach</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Professional Faculty</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Test Series</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Personal Attention</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Deep concept clarity</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Marathon Classes</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Exam focused approach</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Professional Faculty</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Test Series</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Personal Attention</span><span class="marquee-dot">·</span>
+  </div>
+</div>
+
+<!-- COURSES -->
+<section class="section reveal" id="COURSES">
+
+  <span class="section-label">What We Offer</span>
+  <h2 class="section-title">Courses & Subjects</h2>
+
+  <p class="section-subtitle">
+    Select a course to view all subjects covered under that program.
+  </p>
+
+ <div class="course-grid">
+
+
+  <div class="course-card">
+    <button class="course-btn">
+      <span class="course-title">HSC(11th/12th)</span>
+      <span class="course-count">4 Subjects</span>
+    </button>
+    <div class="course-subjects">
+      <ul>
+        <li>Accountancy</li>
+        <li>Economics</li>
+        <li>Organisation of Commerce</li>
+        <li>Mathematics & Statistics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <button class="course-btn">
+      <span class="course-title">CA Foundation</span>
+      <span class="course-count">6 Subjects</span>
+    </button>
+    <div class="course-subjects">
+      <ul>
+        <li>Accounting</li>
+        <li>Business Laws</li>
+        <li>Quantative Aptitude</li>
+        <li>Business Economics</li>
+      </ul>
+    </div>
+  </div>
+
+
+    <!-- CMA Foundation -->
+    <div class="course-card">
+      <button class="course-btn">
+        <span class="course-title">CMA Foundation</span>
+        <span class="course-count">4 Subjects</span>
+      </button>
+      <div class="course-subjects">
+        <ul>
+          <li>Fundamentals of Economics</li>
+          <li>Fundamentals of Accounting</li>
+          <li>Fundamentals of Laws & Ethics</li>
+          <li>Business Mathematics & Statistics</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- ICSE 10th -->
+    <div class="course-card">
+      <button class="course-btn">
+        <span class="course-title">ICSE(9th/10th)</span>
+        <span class="course-count">4 Subjects</span>
+      </button>
+      <div class="course-subjects">
+        <ul>
+          <li>Mathematics</li>
+          <li>Economics</li>
+          <li>Social Studies</li>
+          <li>Commercial Studies</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- WHY ANCA EXPERIENCE -->
+<section class="section reveal" id="why">
+
+  <span class="section-label">Life At ANCA</span>
+  <h2 class="section-title">
+    More Than Just Coaching
+  </h2>
+
+  <p class="section-subtitle">
+    At ANCA, students don't just prepare for exams.
+    They build confidence, friendships, leadership skills,
+    and unforgettable memories.
+  </p>
+
+
+  <div class="event-group infrastructure">
+
+  <div class="gallery-card hero-gallery">
+    <img src="images/classroom.webp">
+    <div class="gallery-overlay">
+      <span>Infrastructure</span>
+      <h3>Premium Classrooms</h3>
+    </div>
+  </div>
+
+  <div class="gallery-card">
+    <img src="images/focused.jpeg">
+    <div class="gallery-overlay">
+      <span>Focused Learning</span>
+      <h3>Academic Excellence</h3>
+    </div>
+  </div>
+
+    <div class="gallery-card">
+    <img src="images/classroom 2.webp">
+    <div class="gallery-overlay">
+      <span>Infrastructure</span>
+      <h3>Modern Learning Space</h3>
+    </div>
+  </div>
+
+  <div class="gallery-card">
+    <img src="images/classroom 3.webp">
+    <div class="gallery-overlay">
+      <span>Infrastructure</span>
+      <h3>Comfortable Environment</h3>
+    </div>
+  </div>
+
+  <div class="gallery-card">
+    <img src="images/classroom 4.webp">
+    <div class="gallery-overlay">
+      <span>Infrastructure</span>
+      <h3>Professional Atmosphere</h3>
+    </div>
+  </div>
+
+  <div class="gallery-card full-gallery">
+    <img src="images/annual1.jpeg">
+    <div class="gallery-overlay">
+      <span>Annual Party</span>
+      <h3>Celebration & Awards</h3>
+    </div>
+  </div>
+
+  <div class="gallery-card full-gallery">
+    <img src="images/group.jpeg">
+    <div class="gallery-overlay">
+      <span>ANCA Family</span>
+      <h3>Growing Together</h3>
+    </div>
+  </div>
+
+  <div class="gallery-card wide">
+    <img src="images/diwali.jpeg">
+    <div class="gallery-overlay">
+      <span>Diwali</span>
+      <h3>Festive Moments</h3>
+    </div>
+  </div>
+
+  <div class="gallery-card">
+    <img src="images/children1.jpeg">
+    <div class="gallery-overlay">
+      <span>Children's Day</span>
+      <h3>Fun & Learning</h3>
+    </div>
+  </div>
+
+  <div class="gallery-card">
+    <img src="images/children2.jpeg">
+    <div class="gallery-overlay">
+      <span>Student Life</span>
+      <h3>Memorable Experiences</h3>
+    </div>
+  </div>
+
+</section>
+
+  </div>
+</section>
+
+
+<!-- RESULTS -->
+<section class="section reveal" id="results">
+
+    <span class="section-label">Academic Excellence</span>
+    <h2 class="section-title">HSC 2025-26 Achievements</h2>
+
+    <!-- Overall Rankers -->
+
+    <div class="rankers-grid">
+
+        <div class="rank-card first">
+            <div class="rank-no">🥇 1st Rank</div>
+            <img src="images/vivek.jpeg" alt="Vivek" loading="lazy">
+            <h3>Vivek Kavde</h3>
+            <div class="percentage">93.33%</div>
+
+            <div class="marks">
+                <p>Accounts : 99</p>
+                <p>Economics : 95</p>
+                <p>Maths : 96</p>
+                <p>OCM : 93</p>
+            </div>
+        </div>
+
+        <div class="rank-card second">
+            <div class="rank-no">🥈 2nd Rank</div>
+            <img src="images/alexia.jpeg" alt="Alexia" loading="lazy">
+            <h3>Alexia Pinto</h3>
+            <div class="percentage">92%</div>
+
+            <div class="marks">
+                <p>Accounts : 96</p>
+                <p>Economics : 96</p>
+                <p>Maths : 94</p>
+                <p>OCM : 93</p>
+            </div>
+        </div>
+
+        <div class="rank-card third">
+            <div class="rank-no">🥉 3rd Rank</div>
+            <img src="images/rohit.jpeg" alt="Rohit" loading="lazy">
+            <h3>Rohit Choudhary</h3>
+            <div class="percentage">90%</div>
+
+            <div class="marks">
+                <p>Accounts : 99</p>
+                <p>Economics : 94</p>
+                <p>Maths : 97</p>
+                <p>OCM : 88</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Subject Toppers -->
+
+    <div class="subject-poster-wrapper">
+
+  <h3 class="subject-title">
+    Complete Subject Topper List
+  </h3>
+
+  <img
+    src="images/subject.jpg"
+    alt="ANCA Subject Toppers"
+    loading="lazy"
+    class="subject-poster">
+
+</div>
+<div class="subject-table">
+
+<h3>All Subject Toppers</h3>
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Student</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>Accounts</td>
+<td>Vivek K</td>
+<td>99</td>
+</tr>
+
+<tr>
+<td>Accounts</td>
+<td>Rohit C</td>
+<td>99</td>
+</tr>
+
+<tr>
+<td>Economics</td>
+<td>Alexia P</td>
+<td>96</td>
+</tr>
+
+<tr>
+<td>Economics</td>
+<td>Drishti T</td>
+<td>96</td>
+</tr>
+
+<tr>
+<td>Maths</td>
+<td>Rohit C</td>
+<td>97</td>
+</tr>
+
+<tr>
+<td>Maths</td>
+<td>Vivek K</td>
+<td>96</td>
+</tr>
+
+</table>
+
+</div>
+
+
+</section>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section reveal" id="reviews">
+
+  <span class="section-label">What Students Say</span>
+
+  <h2 class="section-title">
+    Trusted By Students & Parents
+  </h2>
+
+  <p class="section-subtitle">
+    Rated 4.9 ★ on Google with outstanding student feedback.
+  </p>
+
+  <div class="review-marquee">
+
+    <div class="review-fade-left"></div>
+    <div class="review-fade-right"></div>
+
+    <div class="review-track">
+
+      <!-- SET 1 -->
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Best Choice for Navi Mumbai Commerce students. The teachers are highly experienced & personal attention is given to each student. Notes, test series and board exam tips are extremely helpful.
+        </div>
+        <div class="review-author">Alexpinz</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          ANCA's vision "Learning Today, Leading Forever" impressed me immediately. Abhishek Sir builds a strong knowledge base while maintaining a peaceful and positive classroom atmosphere.
+        </div>
+        <div class="review-author">Ankita Toshniwal</div>
+        <div class="review-time">1 year ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Easy and understandable teaching across all subjects. Professional teachers who give personal attention to every student. It is the best choice.
+        </div>
+        <div class="review-author">Shruti Kachare</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Newly constructed building near Koparkhairane Railway Station. Air-conditioned classrooms, comfortable seating, experienced teachers and limited batch size.
+        </div>
+        <div class="review-author">Arvind Naag</div>
+        <div class="review-time">1 year ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          The best and very intellectual way of teaching. Learning is smooth and interactive. Abhishek Sir is friendly and highly knowledgeable.
+        </div>
+        <div class="review-author">Abhishek Wagaralkar</div>
+        <div class="review-time">1 year ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Teachers teach extremely well. Sessions are interactive and helped me achieve better marks in examinations.
+        </div>
+        <div class="review-author">Shreel Bhanushali</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Friendly atmosphere and excellent teaching. The tests are challenging but very useful for board preparation.
+        </div>
+        <div class="review-author">Shraddha Pathak</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          The staff is cooperative, teachers are understanding and my overall experience has been excellent.
+        </div>
+        <div class="review-author">Drishti Thapar</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Best classes for all grades ❤️
+        </div>
+        <div class="review-author">Sanya Barmare</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <!-- DUPLICATE SAME BLOCK AGAIN FOR INFINITE LOOP -->
+      <!-- Copy all review-card blocks once more here -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Best Choice for Navi Mumbai Commerce students. The teachers are highly experienced & personal attention is given to each student. Notes, test series and board exam tips are extremely helpful.
+        </div>
+        <div class="review-author">Alexpinz</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          ANCA's vision "Learning Today, Leading Forever" impressed me immediately. Abhishek Sir builds a strong knowledge base while maintaining a peaceful and positive classroom atmosphere.
+        </div>
+        <div class="review-author">Ankita Toshniwal</div>
+        <div class="review-time">1 year ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Easy and understandable teaching across all subjects. Professional teachers who give personal attention to every student. It is the best choice.
+        </div>
+        <div class="review-author">Shruti Kachare</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Newly constructed building near Koparkhairane Railway Station. Air-conditioned classrooms, comfortable seating, experienced teachers and limited batch size.
+        </div>
+        <div class="review-author">Arvind Naag</div>
+        <div class="review-time">1 year ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          The best and very intellectual way of teaching. Learning is smooth and interactive. Abhishek Sir is friendly and highly knowledgeable.
+        </div>
+        <div class="review-author">Abhishek Wagaralkar</div>
+        <div class="review-time">1 year ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Teachers teach extremely well. Sessions are interactive and helped me achieve better marks in examinations.
+        </div>
+        <div class="review-author">Shreel Bhanushali</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Friendly atmosphere and excellent teaching. The tests are challenging but very useful for board preparation.
+        </div>
+        <div class="review-author">Shraddha Pathak</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          The staff is cooperative, teachers are understanding and my overall experience has been excellent.
+        </div>
+        <div class="review-author">Drishti Thapar</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">
+          Best classes for all grades ❤️
+        </div>
+        <div class="review-author">Sanya Barmare</div>
+        <div class="review-time">10 months ago</div>
+        <div class="review-google">
+          <span class="google-badge">GOOGLE REVIEW</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA BANNER -->
+<section class="section reveal">
+<section class="cta-banner">
+  <h2>Start Your Journey With ANCA</h2>
+  <p>Enrolments open for the upcoming academic year. Limited seats available.</p>
+  <a href="tel:+919967673877" class="btn-white">📞 Call 099676 73877</a>
+</section>
+</section>
+
+<!-- LOCATION -->
+<section class="section reveal" id="contact">
+
+  <div class="location-details">
+
+    <span class="section-label">Visit ANCA</span>
+    <h2 class="section-title">
+      Learn in an Environment Built for Success
+    </h2>
+
+    <p class="section-subtitle" style="margin-bottom:20px">
+      Located in the heart of Kopar Khairane, ANCA provides a focused,
+      comfortable, and student-friendly learning atmosphere.
+    </p>
+
+    <div class="location-item">
+      <div class="location-icon">📍</div>
+      <div>
+        <div class="location-item-title">Academy Address</div>
+        <div class="location-item-text">
+          Shop No. 12 & 13, Balaji Exotica<br>
+          Sector 9 Kopar Khairane Road<br>
+          Navi Mumbai – 400709
+        </div>
+      </div>
+    </div>
+
+    <div class="location-item">
+      <div class="location-icon">📞</div>
+      <div>
+        <div class="location-item-title">Call Us</div>
+        <div class="location-item-text">
+          099676 73877
+        </div>
+      </div>
+    </div>
+
+    <div class="location-item">
+      <div class="location-icon">🕘</div>
+      <div>
+        <div class="location-item-title">Working Hours</div>
+        <div class="location-item-text">
+          Monday – Saturday<br>
+          10:30 AM onwards
+        </div>
+      </div>
+    </div>
+
+    <div class="location-buttons">
+      <a href="tel:+919967673877" class="location-btn primary">
+        Call Now
+      </a>
+
+      <a
+      href="https://maps.google.com/?q=Abhishek+Naag+Coaching+Academy+Kopar+Khairane"
+      target="_blank"
+      class="location-btn secondary">
+        Open Maps
+      </a>
+    </div>
+
+  </div>
+
+  <div class="location-map">
+
+    <iframe
+      src="https://maps.google.com/maps?q=Abhishek%20Naag%20Coaching%20Academy%20Kopar%20Khairane&t=&z=15&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+
+  </div>
+
+</section>
+</section>
+
+<!-- ENQUIRY MODAL -->
+<div class="enquiry-modal" id="enquiryModal">
+  <div class="enquiry-box">
+
+    <button class="close-enquiry" onclick="closeEnquiry()">×</button>
+
+    <div class="enquiry-header">
+      <h2>Admission Enquiry</h2>
+      <p>Fill in your details and our team will contact you shortly.</p>
+    </div>
+
+    <form class="enquiry-form" id="enquiryForm">
+
+      <div class="form-grid">
+
+        <div class="input-group">
+          <label>Student Full Name</label>
+          <input id="studentName" type="text" placeholder="Enter full name" required>
+        </div>
+
+        <div class="input-group">
+          <label>Parent Name</label>
+          <input id="parentName" type="text" placeholder="Enter parent name" required>
+        </div>
+
+        <div class="input-group">
+          <label>Phone Number</label>
+          <input id="phone" type="tel" placeholder="Enter phone number" required>
+        </div>
+
+        <div class="input-group">
+          <label>WhatsApp Number</label>
+          <input id="whatsapp" type="tel" placeholder="Enter WhatsApp number">
+        </div>
+
+        <div class="input-group">
+          <label>Email Address</label>
+          <input id="email" type="email" placeholder="Enter email">
+        </div>
+
+        <div class="input-group">
+          <label>Previous Class Passed</label>
+          <select id="previousClass" required>
+            <option>Select Class</option>
+            <option>10th SSC</option>
+            <option>11th Commerce</option>
+            <option>12th Commerce</option>
+            <option>CA Foundation</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>School / College Name</label>
+          <input id="school" type="text" placeholder="Enter school or college">
+        </div>
+
+        <div class="input-group">
+          <label>Previous Academic Percentage</label>
+          <input id="percentage" type="text" placeholder="Example: 82%">
+        </div>
+
+        <div class="input-group">
+          <label>Interested Course</label>
+          <select id="course">
+            <option>Select Course</option>
+            <option>HSC(11th)</option>
+            <option>HSC(12th)</option>
+            <option>ICSE(9th)</option>
+            <option>ICSE(10th)</option>
+            <option>CA Foundation</option>
+            <option>CMA Foundation</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Preferred Batch Timing</label>
+          <select id ="batch">
+            <option>Select Timing</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="input-group full-width">
+        <label>Additional Notes</label>
+        <textarea id="notes" rows="4" placeholder="Write any questions or requirements..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-enquiry">
+        Submit Enquiry
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">AN<span>CA</span></div>
+      <div class="footer-tagline">"Learning Today, Leading Forever"</div>
+    </div>
+    <div class="footer-contact">
+      <a href="tel:+919967673877">📞 099676 73877</a>
+      <a href="https://maps.google.com/?q=Abhishek+Naag+Coaching+Academy+Kopar+Khairane" target="_blank">📍 Kopar Khairane, Navi Mumbai</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Abhishek Naag Coaching Academy · All rights reserved</span>
+    <div class="footer-google">
+      <span class="rating-badge">★ 4.9</span>
+      <span>Rated on Google · 23 reviews</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ENQUIRY JS -->
+<script>
+
+function openEnquiry(){
+  document.getElementById('enquiryModal').style.display='flex';
+}
+
+function closeEnquiry(){
+  document.getElementById('enquiryModal').style.display='none';
+}
+
+window.onclick=function(e){
+  const modal=document.getElementById('enquiryModal');
+  if(e.target===modal){
+    modal.style.display='none';
+  }
+}
+const form = document.getElementById("enquiryForm");
+
+form.addEventListener("submit", async function(e) {
+
+  e.preventDefault();
+
+  const submitBtn =
+    document.querySelector(".submit-enquiry");
+
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = "Submitting...";
+
+  const data = {
+    studentName: document.getElementById("studentName").value,
+    parentName: document.getElementById("parentName").value,
+    phone: document.getElementById("phone").value,
+    whatsapp: document.getElementById("whatsapp").value,
+    email: document.getElementById("email").value,
+    previousClass: document.getElementById("previousClass").value,
+    school: document.getElementById("school").value,
+    percentage: document.getElementById("percentage").value,
+    course: document.getElementById("course").value,
+    batch: document.getElementById("batch").value,
+    notes: document.getElementById("notes").value
+  };
+
+  if(data.phone.length !== 10){
+
+    alert(
+      "Please enter a valid 10 digit phone number."
+    );
+
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = "Submit Enquiry";
+
+    return;
+  }
+  
+  if(data.studentName.trim() === ""){
+
+    alert("Enter Student Name");
+
+    return;
+  }
+
+  try {
+
+    const fd = new FormData();
+
+    Object.keys(data).forEach(key => {
+      fd.append(key, data[key]);
+    });
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbyHCzLJv_zVVpj7RRF_0Brmq1jKqRgU9Dq5MlT_Zf17SfJ9ZbyINXhEbmqe7fG2dpog/exec",
+      {
+        method: "POST",
+        body: fd
+      }
+    );
+
+    if(!response.ok){
+      throw new Error("Server Error");
+    } 
+
+    alert(
+      "Thank you! Your enquiry has been submitted."
+    );
+
+    form.reset();
+    closeEnquiry();
+
+  } catch(err) {
+
+    alert(
+      "Submission failed. Please try again."
+    );
+
+    console.error("Enquiry submission error:", err);
+  
+  }
+
+  submitBtn.disabled = false;
+  submitBtn.innerHTML = "Submit Enquiry";
+
+});
+
+const accordions=document.querySelectorAll('.course-btn');
+
+accordions.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+
+    const content=btn.nextElementSibling;
+
+    document.querySelectorAll('.course-subjects')
+      .forEach(el=>{
+        if(el!==content) el.style.maxHeight=null;
+      });
+
+    content.style.maxHeight=
+      content.style.maxHeight
+      ? null
+      : content.scrollHeight+'px';
+
+  });
+});
+
+const reveals=document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll',()=>{
+
+reveals.forEach(item=>{
+
+const top=item.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+item.classList.add('active');
+}
+
+});
+
+});
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('active');
+    }
+  });
+},{
+  threshold:.1
+});
+
+document
+  .querySelectorAll('.reveal')
+  .forEach(el=>observer.observe(el));
+
+
+function toggleMenu(){
+  document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+}
+
+
+document.querySelectorAll('#navLinks a').forEach(link=>{
+  link.addEventListener('click',()=>{
+    document
+      .getElementById('navLinks')
+      .classList
+      .remove('active');
+  });
+});
+</script>
+</body>
+</html>

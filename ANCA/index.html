@@ -525,24 +525,41 @@ nav {
   }
 
 .enquiry-float{
-  position:fixed;
-  right:24px;
-  bottom:24px;
-  z-index:9999;
-  background:linear-gradient(135deg,#D4A64A,#B8862F);
-  color:white;
-  padding:16px 24px;
-  border-radius:60px;
-  font-weight:600;
-  cursor:pointer;
-  box-shadow:0 15px 35px rgba(0,0,0,0.25);
-  animation:floatPulse 2s infinite;
-  transition:all .25s ease;
+  position: fixed;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%) rotate(180deg);
+
+  z-index: 9999;
+  background: linear-gradient(135deg, #D4A64A, #B8862F);
+  color: white;
+
+  padding: 20px 14px;
+  border: none;
+  border-radius: 0 14px 14px 0;
+
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.5px;
+
+  writing-mode: vertical-rl;
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  transition:
+    right 0.3s ease,
+    padding 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .enquiry-float:hover{
-  transform:translateY(-4px) scale(1.03);
+  right: 0;
+  padding: 22px 18px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.35);
 }
+
 
 @keyframes floatPulse{
   0%{box-shadow:0 0 0 0 rgba(212,166,74,0.4);}
@@ -683,12 +700,6 @@ nav {
     font-size:30px;
   }
 
-  .enquiry-float{
-    right:14px;
-    bottom:14px;
-    padding:14px 18px;
-    font-size:14px;
-  }
 
 }
   .course-grid{
@@ -2465,6 +2476,9 @@ nav {
   </div>
 </footer>
 
+<button class="enquiry-float" onclick="openEnquiry()">
+  ✨ Enquire Now
+</button>
 
 <!-- ENQUIRY JS -->
 <script>

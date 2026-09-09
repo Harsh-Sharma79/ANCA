@@ -1630,6 +1630,32 @@ nav {
   color: var(--gold);
   letter-spacing: 0.5px;
 }
+
+/* STATS SECTION */
+#stats {
+  background: #0E2A47;
+}
+
+#stats .section-title {
+  color: white;
+}
+
+#stats .section-subtitle {
+  color: rgba(255,255,255,0.7);
+}
+
+#stats .hero-stats {
+  border-top: 1px solid rgba(212,166,74,0.25);
+  margin-top: 40px;
+}
+
+#stats .stat-number {
+  color: white;
+}
+
+#stats .stat-label {
+  color: rgba(255,255,255,0.65);
+}
 </style>
 </head>
 <body>
@@ -1675,26 +1701,132 @@ nav {
       <a href="tel:+919136925961" class="btn-primary">Call Now</a>
       <a href="#COURSES" class="btn-secondary">Explore Courses</a>
     </div>
-    <div class="hero-stats">
-      <div>
-        <div class="star-group">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-        <span class="stat-number">4.9</span>
-        <span class="stat-label">Google Rating</span>
-      </div>
-      <div>
-        <span class="stat-number">23+</span>
-        <span class="stat-label">Student Reviews</span>
-      </div>
-      <div>
-        <span class="stat-number">Commerce<br><span style="font-size:22px"></span></span>
-        <span class="stat-label">Specialisation</span>
-      </div>
-    </div>
   </div>
 </section>
 
+<!-- RESULTS -->
+<section class="section reveal" id="results">
+
+    <span class="section-label">Academic Excellence</span>
+    <h2 class="section-title">HSC 2025-26 Achievements</h2>
+
+    <!-- Overall Rankers -->
+
+    <div class="rankers-grid">
+
+        <div class="rank-card first">
+            <div class="rank-no">🥇 1st Rank</div>
+            <img src="images/vivek.jpeg" alt="Vivek" loading="lazy">
+            <h3>Vivek Kavde</h3>
+            <div class="percentage">93.33%</div>
+
+            <div class="marks">
+                <p>Accounts : 99</p>
+                <p>Economics : 95</p>
+                <p>Maths : 96</p>
+                <p>OCM : 93</p>
+            </div>
+        </div>
+
+        <div class="rank-card second">
+            <div class="rank-no">🥈 2nd Rank</div>
+            <img src="images/alexia.jpeg" alt="Alexia" loading="lazy">
+            <h3>Alexia Pinto</h3>
+            <div class="percentage">92%</div>
+
+            <div class="marks">
+                <p>Accounts : 96</p>
+                <p>Economics : 96</p>
+                <p>Maths : 94</p>
+                <p>OCM : 93</p>
+            </div>
+        </div>
+
+        <div class="rank-card third">
+            <div class="rank-no">🥉 3rd Rank</div>
+            <img src="images/rohit.jpeg" alt="Rohit" loading="lazy">
+            <h3>Rohit Choudhary</h3>
+            <div class="percentage">90%</div>
+
+            <div class="marks">
+                <p>Accounts : 99</p>
+                <p>Economics : 94</p>
+                <p>Maths : 97</p>
+                <p>OCM : 88</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Subject Toppers -->
+
+    <div class="subject-poster-wrapper">
+
+  <h3 class="subject-title">
+    Complete Subject Topper List
+  </h3>
+
+  <img
+    src="images/subject.jpg"
+    alt="ANCA Subject Toppers"
+    loading="lazy"
+    class="subject-poster">
+
+</div>
+<div class="subject-table">
+
+<h3>All Subject Toppers</h3>
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Student</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>Accounts</td>
+<td>Vivek K</td>
+<td>99</td>
+</tr>
+
+<tr>
+<td>Accounts</td>
+<td>Rohit C</td>
+<td>99</td>
+</tr>
+
+<tr>
+<td>Economics</td>
+<td>Alexia P</td>
+<td>96</td>
+</tr>
+
+<tr>
+<td>Economics</td>
+<td>Drishti T</td>
+<td>96</td>
+</tr>
+
+<tr>
+<td>Maths</td>
+<td>Rohit C</td>
+<td>97</td>
+</tr>
+
+<tr>
+<td>Maths</td>
+<td>Vivek K</td>
+<td>96</td>
+</tr>
+
+</table>
+
+</div>
+
+
+</section>
 
 <!-- MARQUEE -->
 <div class="marquee-band">
@@ -1745,7 +1877,7 @@ nav {
   <div class="course-card">
     <button class="course-btn">
       <span class="course-title">CA Foundation</span>
-      <span class="course-count">4 Subjects</span>
+      <span class="course-count">6 Subjects</span>
     </button>
     <div class="course-subjects">
       <ul>
@@ -1898,127 +2030,48 @@ nav {
 </section>
 
 
-<!-- RESULTS -->
-<section class="section reveal" id="results">
+<!-- ANCA STATS -->
+<section class="section reveal" id="stats">
 
-    <span class="section-label">Academic Excellence</span>
-    <h2 class="section-title">HSC 2025-26 Achievements</h2>
+  <span class="section-label">Why Students Trust ANCA</span>
 
-    <!-- Overall Rankers -->
+  <h2 class="section-title">
+    Excellence That Speaks for Itself
+  </h2>
 
-    <div class="rankers-grid">
+  <p class="section-subtitle">
+    A strong foundation, trusted teaching, and specialised Commerce education.
+  </p>
 
-        <div class="rank-card first">
-            <div class="rank-no">🥇 1st Rank</div>
-            <img src="images/vivek.jpeg" alt="Vivek" loading="lazy">
-            <h3>Vivek Kavde</h3>
-            <div class="percentage">93.33%</div>
+  <div class="hero-stats stats-section">
 
-            <div class="marks">
-                <p>Accounts : 99</p>
-                <p>Economics : 95</p>
-                <p>Maths : 96</p>
-                <p>OCM : 93</p>
-            </div>
-        </div>
+    <!-- GOOGLE RATING -->
+    <div>
+      <div class="star-group">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+      </div>
 
-        <div class="rank-card second">
-            <div class="rank-no">🥈 2nd Rank</div>
-            <img src="images/alexia.jpeg" alt="Alexia" loading="lazy">
-            <h3>Alexia Pinto</h3>
-            <div class="percentage">92%</div>
-
-            <div class="marks">
-                <p>Accounts : 96</p>
-                <p>Economics : 96</p>
-                <p>Maths : 94</p>
-                <p>OCM : 93</p>
-            </div>
-        </div>
-
-        <div class="rank-card third">
-            <div class="rank-no">🥉 3rd Rank</div>
-            <img src="images/rohit.jpeg" alt="Rohit" loading="lazy">
-            <h3>Rohit Choudhary</h3>
-            <div class="percentage">90%</div>
-
-            <div class="marks">
-                <p>Accounts : 99</p>
-                <p>Economics : 94</p>
-                <p>Maths : 97</p>
-                <p>OCM : 88</p>
-            </div>
-        </div>
-
+      <span class="stat-number">4.9</span>
+      <span class="stat-label">Google Rating</span>
     </div>
 
-    <!-- Subject Toppers -->
+    <!-- STUDENT REVIEWS -->
+    <div>
+      <span class="stat-number">23+</span>
+      <span class="stat-label">Student Reviews</span>
+    </div>
 
-    <div class="subject-poster-wrapper">
+    <!-- SPECIALISATION -->
+    <div>
+      <span class="stat-number">Commerce</span>
+      <span class="stat-label">Specialisation</span>
+    </div>
 
-  <h3 class="subject-title">
-    Complete Subject Topper List
-  </h3>
-
-  <img
-    src="images/subject.jpg"
-    alt="ANCA Subject Toppers"
-    loading="lazy"
-    class="subject-poster">
-
-</div>
-<div class="subject-table">
-
-<h3>All Subject Toppers</h3>
-
-<table>
-
-<tr>
-<th>Subject</th>
-<th>Student</th>
-<th>Marks</th>
-</tr>
-
-<tr>
-<td>Accounts</td>
-<td>Vivek K</td>
-<td>99</td>
-</tr>
-
-<tr>
-<td>Accounts</td>
-<td>Rohit C</td>
-<td>99</td>
-</tr>
-
-<tr>
-<td>Economics</td>
-<td>Alexia P</td>
-<td>96</td>
-</tr>
-
-<tr>
-<td>Economics</td>
-<td>Drishti T</td>
-<td>96</td>
-</tr>
-
-<tr>
-<td>Maths</td>
-<td>Rohit C</td>
-<td>97</td>
-</tr>
-
-<tr>
-<td>Maths</td>
-<td>Vivek K</td>
-<td>96</td>
-</tr>
-
-</table>
-
-</div>
-
+  </div>
 
 </section>
 <!-- REVIEWS -->
